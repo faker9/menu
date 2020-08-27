@@ -1,0 +1,74 @@
+/* pages/publish/publish.wxss */
+.publish{
+    padding:0 30rpx;
+    background-color: white;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.menuname{
+    height: 150rpx;
+    line-height: 80rpx;
+    border-bottom: 1px solid #f1f1f1;
+}
+.menusort{
+    padding-top: 15rpx;
+    padding-bottom: 30rpx;
+    border-bottom: 1px solid #f1f1f1;
+}
+.menuSortItem{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menusort radio{
+    padding-top: 20rpx;
+    margin-right: 10rpx;
+}
+.menuPic{
+    margin-top: 15rpx;
+    padding-bottom: 30rpx;
+    border-bottom: 1px solid #f1f1f1;
+}
+.picAndUp{
+    margin-top: 15rpx;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+.menuPic text{
+    float:right;
+    color: #999;
+}
+.menuPic image{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 10rpx;
+    margin:0 36rpx 15rpx 0;
+}
+.menuPic image:nth-of-type(3){
+    margin-right: 0;
+}
+
+.menuPic .up{
+    display: inline-block;
+    width: 200rpx;
+    height: 200rpx;
+    border: 1rpx dashed #333;
+    border-radius: 10rpx;
+    font-size: 60rpx;
+    text-align: center;
+    line-height: 200rpx;
+}
+.des{
+    margin-top: 15rpx;
+}
+.des textarea{
+    border: 1px solid #999;
+    padding-left: 15rpx;
+    padding-top: 15rpx;
+    width: 660rpx;
+    height: 250rpx;
+}
+button{
+    margin-top: 30rpx;
+}

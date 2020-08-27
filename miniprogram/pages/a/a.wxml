@@ -1,0 +1,16 @@
+<!--pages/a/a.wxml-->
+<text>pages/a/a.wxml</text>
+<van-rate
+  value="{{ value }}"
+  icon="like"
+  void-icon="like-o"
+  bind:change="onChange"
+/>
+<van-rate
+  value="{{ value }}"
+  size="{{ 25 }}"
+  color="#ee0a24"
+  void-color="#eee"
+  void-icon="star"
+  bind:change="onChange"
+/>

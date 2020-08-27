@@ -1,0 +1,85 @@
+/* 管理员操作样式-- 菜谱分类 */
+.adminPerson {
+  margin-top: 10px;
+}
+/* 菜谱分类列表 */
+.edit{
+  width: 222rpx;
+}
+.cpfllb .name{
+  flex: 1;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.cpfllb .btn {
+  padding:6rpx 20rpx;
+  margin-right: 15rpx;
+  font-size: 30rpx;
+  line-height: 30px;
+  color: #fff;
+  display: block;
+  width: 60rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 10rpx;
+}
+.cpfllb .txt{
+  font-size: 34rpx;
+}
+.cpfllb{
+  overflow: hidden;
+}
+.cpfllb view {
+  width: 48.5%;
+  height: 110rpx;
+  border: 1px solid #ccc;
+  float: left;
+  /* display: flex;
+  justify-content: space-between; */
+  margin-left: 4rpx;
+  margin-top: 4rpx;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* 添加触发时 */
+.cptjfl {
+  clear: both;
+}
+.cptjfl input{
+  display: inline-block;
+  width: 400rpx;
+  height: 150rpx;
+  padding-left: 10rpx;
+}
+.cptjfl button{
+  width: 300rpx;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+.cptjfl .weui-cell_vcode{
+  display: flex;
+  flex-wrap: nowrap;
+  /* height: 150rpx; */
+}
+
+
+.cpfllb .fladd {
+  display: flex;
+  justify-content: center;
+}
+
+.cpfllb .fladd1 {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.cpfllb .fladd image {
+  width: 25px;
+  height: 25px;
+}

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "mp-tabbar": "weui-miniprogram/tabbar/tabbar",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-cells": "weui-miniprogram/cells/cells"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#f6623a",
+  "backgroundTextStyle": "dark"
+}

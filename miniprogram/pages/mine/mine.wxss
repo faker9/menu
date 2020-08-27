@@ -1,0 +1,146 @@
+/* pages/mine/mine.wxss */
+.mine{
+    background-color: white;
+    min-height:  100vh;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.top{
+    position: absolute;
+    width: 750rpx;
+    top: 0;
+    left: 0;
+    padding-top: 50rpx;
+    height: 350rpx;
+}
+.userinfo_img{
+    border-radius:0 ;
+    width: 750rpx;
+    height: 350rpx;
+}
+.unlogin{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.unlogin  button{
+    color: white;
+    border: 1px solid #f5f5f5;
+    border-radius: 5rpx;
+    width: 200rpx;
+}
+image{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    margin-bottom: 25rpx;
+}
+
+.bottom .nav{
+    display: flex;
+    height: 100rpx;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1rpx solid #f1f1f1;
+}
+.bottom .nav view{
+    height: 100rpx;
+    flex: 1;
+    text-align: center;
+    line-height: 100rpx;
+}
+.bottom .active{
+    border-bottom: 1px solid red;
+    color: red;
+}
+.con .unloginBottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.con .unloginBottom image{
+    width: 300rpx;
+    height: 300rpx;
+    border-radius: 0;
+}
+.con .unloginBottom text{
+    color: #999;
+}
+
+/* 处理个人中心页面未登录状态显示的内容 */
+.abcdef {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .content {
+    margin: 20rpx 0px;
+  }
+  
+  /* 菜单列表 */
+  .swiper_con {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  
+  }
+  
+  .cdli {
+    width: 45%;
+    border: 1px solid #ccc;
+    float: left;
+    margin-left: 3%;
+    margin-top: 10rpx;
+    white-space: nowrap;
+    border-radius: 15px;
+    /* transition: all 3s; */
+  }
+  
+  .cdli view {
+    display: inline-block;
+  }
+  
+  .delCdlb {
+    width: 50px;
+    height: 180px;
+    background: #f00;
+    /* color: #fff; */
+    position: relative;
+    top: -75px;
+  }
+  
+  .cdli_info {
+    width: 100%;
+    height: 100%;
+  
+  }
+  
+  .cdli_info image {
+    width: 100%;
+    height: 145px;
+    position: relative;
+    border-radius: 15px;
+  }
+  
+  .cdli_info text {
+    width: 100%;
+    display: block;
+    line-height: 20rpx;
+    font-size: 30rpx;
+  }
+  
+  .cdlitj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cdlitj image {
+    width: 40px;
+    height: 40px;
+  }

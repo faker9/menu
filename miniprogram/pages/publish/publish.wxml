@@ -1,0 +1,30 @@
+<!--pages/publish/publish.wxml-->
+<view class="publish">
+    <form bindsubmit="submit">
+	<view class="menuname">
+		<label>菜单名称</label>
+		<input type="text" placeholder="请输入菜单名称" name='menuName'></input>
+	</view>
+	<view class="menusort">
+		<label>菜单分类</label>
+		<radio-group name='menuSort' class='menuSortItem'>
+			<radio wx:for='{{typeList}}' wx:key="index" id='{{item._id}}'  value="{{item.name}}" bindtap="menuType">{{item.name}}</radio>
+		</radio-group>
+	</view>
+	<!-- 上传图片 -->
+	<view class="menuPic">
+		<label>菜谱图片 <text>{{num}}/5</text></label>
+		<view class="picAndUp">
+				<image wx:if="{{tempFilePath.length!=0}}" wx:for="{{tempFilePath}}" wx:key="index" src="{{item}}" mode="aspectFill"></image>
+			
+			<view class="up" bindtap="upload">+</view>
+		</view>
+	</view>
+	<!-- //描述 -->
+	<view class="des">
+		<label>菜品做法</label>
+		<textarea name='des' placeholder="请输入菜品做法"></textarea>
+	</view>
+	<button type="primary" form-type="submit" wx:if="{{canSub}}">发布</button>
+    </form>
+</view>

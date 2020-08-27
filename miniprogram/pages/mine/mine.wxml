@@ -1,0 +1,97 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine">
+<!-- 上方模块 -->
+<image src='/static/personal/background.jpg' class='userinfo_img'></image>
+	<view class="top">
+		<view class="unlogin" wx:if='{{info==null}}'>
+			<image src="../../images/my.png"></image>
+			<button open-type="getUserInfo" bindgetuserinfo="getuserinfo">登录</button>
+		</view>
+		<view class="user" wx:else>
+			<image src="{{info.avatarUrl}}" bindtap="toType"></image>
+			<view>{{info.nickName}}</view>
+		</view>
+	</view>
+	<!-- //选项卡未登录 -->
+	<view>
+		<view class="bottom">
+			<view class="nav">
+				<view class="{{index==activeId?'active':''}}" wx:for='{{arr}}' wx:key="index" bindtap="choose" id='{{index}}'>{{item}}</view>
+			</view>
+			<view class="con">
+				<view wx:if='{{info==null}}' class="unloginBottom">
+					<image src="../../images/unlogin.png"></image>
+					<text> 还没登录哦</text>
+				</view>
+				
+				<!-- 已登录显示的内容 -->
+		<block wx:else>
+			<!-- 显示菜单列表 -->
+			<view id="recipeList" wx:if='{{activeId==0}}'>
+				<view class='swiper_con' >
+					<!-- 菜单列表 -->
+					<scroll-view  style="height:180px" class="cdli" scroll-x="{{ true }}" wx:for='{{menuList}}' wx:key='index' scroll-with-animation="{{true}}">
+						<view class="cdli_info"  >
+							<!-- 图片 -->
+							<image src="{{item.img[0]}}" mode="aspectFill" bindtap="toDetail" id = '{{item._id}}'></image>
+							<!-- 文本 -->
+							<text>{{item.menuName}}</text>
+						</view>
+						<!-- 删除菜单列表 -->
+						<view class="delCdlb">
+							<!-- 删除菜单列表 -->
+							<view style="margin-top:76px;color:#fff;" bindtap="delCdlb" id="{{ item._id }}" data-index="{{ index }}">
+								删除
+							</view>
+						</view>
+					</scroll-view>
+					<!-- 点击添加按钮，显示选择菜谱分类，添加菜单，添加步骤 -->
+					<view class="cdli cdlitj" style="height:180px" bindtap="toPublish">
+						<image src="/static/personal/add.png"></image>
+					</view>
+				</view>
+			</view>
+
+			<!-- 显示菜单分类列表（菜谱） -->
+			<view id="typeList" wx:if='{{activeId==1}}'>
+				<view class='swiper_con1'>
+					<!-- 自己发布过的菜单对应的菜谱分类列表   -->
+					<view class="page">
+						<view class="page__bd">
+							<view class="weui-cells">
+								<mp-slideview wx:for="{{typeList}}" wx:key='index' buttons="{{[{type: 'warn',text: '查看',extClass: 'test'}]}}"  id = '{{item._id}}' bindbuttontap="toSortList" >
+									<mp-cell value="{{item.name}}" footer="左划more"></mp-cell>
+								</mp-slideview>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<!-- 显示关注菜单列表 -->
+			<view id="followRecipe" wx:if='{{activeId==2}}'>
+				<view class='swiper_con'>
+					<!-- 列出自己所有关注的菜单菜谱列表，然后通过点击能够调到对应的详情页面 -->
+					<view style="height:180px;margin-top:20px" class="cdli" wx:for="{{loveList}}" wx:key='index' bindtap="toDetail" id="{{item._id}}">
+						<view class="cdli_info" style="text-align:center">
+							<!-- 图片 -->
+							<image src="{{item.img[0]}}" mode="aspectFill"></image>
+							<!-- 文本 -->
+							<text>{{item.menuName}}</text>
+
+						</view>
+
+					</view>
+					<view wx:if="{{ guanzhu.length <= 0 }}" style="text-align:center;margin-top:100px">
+						暂无关注哦
+					</view>
+				</view>
+			</view>
+
+		</block>
+			</view>
+		</view>
+	
+	
+	</view>
+</view>
